@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Computing Cell - Task 2</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Cloud Computing Cell</h1>
+      <nav class="tabs" role="navigation" aria-label="Main">
+        <button id="tab-form" class="tab active">Registration Form</button>
+        <button id="tab-carousel" class="tab">Carousel</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="form-section" class="panel">
+        <form id="registrationForm" novalidate>
+          <h2>Registration</h2>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+            <small class="error" data-for="name"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+            <small class="error" data-for="email"></small>
+          </div>
+
+          <div class="field">
+            <label for="contact">Contact Number</label>
+            <input id="contact" name="contact" type="text" inputmode="numeric" required />
+            <small class="error" data-for="contact"></small>
+          </div>
+
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="">Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <small class="error" data-for="gender"></small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" required />
+            <small class="error" data-for="password"></small>
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" required />
+            <small class="error" data-for="confirmPassword"></small>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn">Register</button>
+            <div id="formSuccess" class="success" aria-live="polite"></div>
+          </div>
+        </form>
+      </section>
+
+      <section id="carousel-section" class="panel hidden">
+        <h2>Image Carousel</h2>
+        <div class="carousel">
+          <button class="arrow left" id="prevBtn" aria-label="Previous">‹</button>
+          <div class="viewport">
+            <div class="slides" id="slides">
+              <div class="slide" data-index="0">
+                <img src="https://picsum.photos/id/1015/800/450" alt="Slide 1">
+              </div>
+              <div class="slide" data-index="1">
+                <img src="https://picsum.photos/id/1016/800/450" alt="Slide 2">
+              </div>
+              <div class="slide" data-index="2">
+                <img src="https://picsum.photos/id/1025/800/450" alt="Slide 3">
+              </div>
+            </div>
+          </div>
+          <button class="arrow right" id="nextBtn" aria-label="Next">›</button>
+        </div>
+
+        <div id="ratingContainer" class="rating-container">
+          <div class="stars" id="stars" aria-label="Rating">
+            <span class="star" data-value="1" role="button" aria-label="1 star">★</span>
+            <span class="star" data-value="2" role="button" aria-label="2 stars">★</span>
+            <span class="star" data-value="3" role="button" aria-label="3 stars">★</span>
+            <span class="star" data-value="4" role="button" aria-label="4 stars">★</span>
+            <span class="star" data-value="5" role="button" aria-label="5 stars">★</span>
+          </div>
+          <div class="rating-info" id="ratingInfo">No rating yet</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
